@@ -35,7 +35,7 @@
       </form>
     </nav>
 
-    <section class="row offset-lg-1 col-lg-10" style="background-color:gray;margin-top:1em">
+    <section class="row offset-lg-1 col-lg-10" style="margin-top:1em">
       @if(isset($products))
       @foreach($products as $product)
         <div class="card" style="width: 18rem;margin-left:2.5em;margin-top:1em">

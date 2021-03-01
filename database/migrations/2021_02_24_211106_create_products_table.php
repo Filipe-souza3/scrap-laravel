@@ -27,7 +27,7 @@ class CreateProductsTable extends Migration
             $table->foreign('research_id')->references('id')->on('researches');
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

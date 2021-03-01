@@ -9,3 +9,4 @@ class Research extends Model
     protected $table = 'researches';
     protected $fillable = ['research'];
 }
+

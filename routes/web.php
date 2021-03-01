@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/','ProductController@index')->name('index');
-Route::post('findProduct','ProductController@find')->name('find.product');
+Route::post('findProduct','ProductController@find')->name('find.product'); 

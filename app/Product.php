@@ -11,3 +11,4 @@ class Product extends Model
         'path_photo','description','category','price','site','research_id'
     ];
 }
+

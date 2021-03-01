@@ -255,8 +255,5 @@ class ProductController extends Controller
 
             return view('pesquisar',['products'=>$productArray]);
     }  
-
-
-
  
 }
