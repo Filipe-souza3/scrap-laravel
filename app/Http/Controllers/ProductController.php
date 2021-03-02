@@ -129,7 +129,7 @@ class ProductController extends Controller
                 $arrayProduct = DB::select("select path_photo,description,category,price,site,research_id
                 from products where research_id = :rsc and category = :slccategory", ['rsc'=>$rsc->id,'slccategory'=>$slcCategory]);
             }
-            var_dump($rsc->id,$slcSite,$slcCategory);
+            // var_dump($rsc->id,$slcSite,$slcCategory);
         }else{
              $arrayProduct = null;
         }
