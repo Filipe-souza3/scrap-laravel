@@ -228,10 +228,10 @@ class ProductController extends Controller
             
 
             }else if($webSite == 2){ //buscape
-                $priceReal = $xpath->query('//span[@class="customValue"][1]//span[@class="mainValue"][1]');
-                $priceCentavo = $xpath->query('//span[@class="customValue"][1]//span[@class="centsValue"][1]'); 
-                $description = $xpath->query('//div[@class="cardBody"][1]//a[@class="name"][1]');
-                $path_photo = $xpath->query('//a[@class="cardImage"][1]//img[@class="image"][1]/@src');
+                $priceReal = $xpath->query('//span[@class="customValue"][1]/span[@class="mainValue"][1]');
+                $priceCentavo = $xpath->query('//span[@class="customValue"][1]/span[@class="centsValue"][1]'); 
+                $description = $xpath->query('//div[@class="cardBody"][1]/a[@class="name"][1]');
+                $path_photo = $xpath->query('//a[@class="cardImage"][1]/img[@class="image"][1]/@src');
                 $textHtml = (string)str_replace('\"','"',$htmlResponse);
                 $site = "Buscape";
 

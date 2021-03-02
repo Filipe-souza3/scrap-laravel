@@ -11,7 +11,7 @@
     <title>Pesquisar produto</title>
 </head>
 <style>
-  html,body{margin:0 padding:0}
+  html,body{margin:0; padding:0}
   header{background-color:green;height:5em;height:10em}
   nav{margin-top:1em;}
   select[name="slc_site"]{margin-left:0.5em}

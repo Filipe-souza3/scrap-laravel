@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Artisan::call('storage:link', [] );
 
 Route::get('/','ProductController@index')->name('index');
 Route::post('findProduct','ProductController@find')->name('find.product'); 
