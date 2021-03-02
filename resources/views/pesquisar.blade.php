@@ -11,7 +11,7 @@
     <title>Pesquisar produto</title>
 </head>
 <body>
-    <header class="container-fluid" style="background-color:green;height:5em">
+    <header class="container-fluid" style="background-color:green;height:5em;height:10em">
       Buscador{{$product->description ?? ''}}
 
     </header>
@@ -38,13 +38,13 @@
     <section class="row offset-lg-1 col-lg-10" style="margin-top:1em">
       @if(isset($products))
       @foreach($products as $product)
-        <div class="card" style="width: 18rem;margin-left:2.5em;margin-top:1em">
-              {{-- <div class="bd-placeholder-img card-img-top" width="100%" height="180"> --}}
-                <img src="{{$product->path_photo ?? ''}}" width="100" height="100" class="img-tumbnail">
-              {{-- </div> --}}
-            <div class="card-body">
-              {{-- <h5 class="card-title">{{$x}}</h5> --}}
-              <p class="card-text">{{$product->description ?? ''}}</p>
+
+        <div class="card" style="width:18rem;margin-left:2.5em;margin-top:1em">
+              <div class="text-center" width="5" height="180">
+                <img src="{{$product->path_photo ?? ''}}" class="rounded" style="min-height:14;max-height:18em; ">
+              </div>
+            <div class="card-body" style="display:flex;justify-content:center;align-items: center;">
+              <p class="card-text" style="">{{$product->description ?? ''}}</p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Preço: {{$product->price ?? ''}}</li>
@@ -53,10 +53,8 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Categoria: {{$product->category ?? ''}}</li>
             </ul>
-            {{-- <div class="card-body">
-              <li class="list-group-item">Categoria: {{$product->category ?? ''}}</li>
-            </div> --}}
         </div>
+
       @endforeach
       @endif
     </section>
