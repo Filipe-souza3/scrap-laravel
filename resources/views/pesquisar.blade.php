@@ -42,6 +42,7 @@
           <option value="Mercado livre">Mercado livre</option>
           <option value="Buscape">Buscapé</option>
         </select>
+        <input type="text" class="form-control col-lg-3"  id="input" name="input" placeholder="Pesquisar"  style="margin-left:0.5em">
         <button type="submit" class="btn btn-outline-info">Buscar</button>
       </form>
     </nav>
