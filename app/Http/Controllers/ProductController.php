@@ -228,10 +228,19 @@ class ProductController extends Controller
             
 
             }else if($webSite == 2){ //buscape
-                $priceReal = $xpath->query('//span[@class="customValue"][1]/span[@class="mainValue"][1]');
-                $priceCentavo = $xpath->query('//span[@class="customValue"][1]/span[@class="centsValue"][1]'); 
-                $description = $xpath->query('//div[@class="cardBody"][1]/a[@class="name"][1]');
-                $path_photo = $xpath->query('//a[@class="cardImage"][1]/img[@class="image"][1]/@src');
+
+                // $priceReal = $xpath->query('//span[@class="customValue"][1]/span[@class="mainValue"][1]');
+                // $priceCentavo = $xpath->query('//span[@class="customValue"][1]/span[@class="centsValue"][1]'); 
+                // $description = $xpath->query('//*[@id="resultArea"]/div[3]/div/div/div[2]/a[@class="name"]');
+                // $path_photo = $xpath->query('//a[@class="cardImage"][1]/img[1]/@src');
+
+
+                $priceReal = $xpath->query('//*[@id="resultArea"]/div[3]/div/div/div/div/div/div/a[@class="price"][1]/span/span[1]');
+                $priceCentavo = $xpath->query('//*[@id="resultArea"]/div[3]/div/div/div/div/div/div/a[@class="price"][1]/span/span[2]'); 
+                $description = $xpath->query('//*[@id="resultArea"]/div[3]/div/div/div[2]/a[@class="name"]');
+                $path_photo = $xpath->query('//*[@id="resultArea"]/div[3]/div/div/a[@class="cardImage"]/img/@src');
+
+
                 $textHtml = (string)str_replace('\"','"',$htmlResponse);
                 $site = "Buscape";
 
